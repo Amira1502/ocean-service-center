@@ -1,0 +1,51 @@
+<div class="app-page-how-it-works">
+    <h2 id="how-it-works">How It Works</h2>
+
+    <mat-tab-group class="mat-tab-label-container">
+        <mat-tab label="Boat Owner">
+            <div class="grid-layout">
+                <div class="grid-item" *ngFor="let item of itemsBoatOwner">
+                    <img src={{item.icon}} class="icon" />
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
+                </div>
+            </div>
+            <span class="container-button">
+                <button class="get-started">
+                    Signup as Boat Owner
+                </button>
+            </span>
+        </mat-tab>
+
+        <mat-tab label="Shipyard">
+            <div class="grid-layout">
+                <div class="grid-item" *ngFor="let item of itemsShipyard">
+                    <img src={{item.icon}} class="icon" />
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
+                </div>
+                <span class="container-button">
+                    <button class="get-started">
+                        Signup as Repair Professional/Shipyard 
+                    </button>
+                </span>
+            </div>
+        </mat-tab>
+        
+        <mat-tab label="Surveyor">
+            <div class="grid-layout">
+                <div class="grid-item" *ngFor="let item of itemsSurveyor">
+                    <img src={{item.icon}} class="icon" />
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.text }}</p>
+                </div>
+            </div>
+            <span class="container-button">
+                <button class="get-started">
+                    Signup as Surveyor
+                </button>
+            </span>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>

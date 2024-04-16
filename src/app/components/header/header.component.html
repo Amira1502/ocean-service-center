@@ -1,13 +1,50 @@
 <header>
-  <mat-toolbar color="primary">
-    <img src="assets/logo.png" alt="Logo" class="logo">
-    <span class="center-content">
-      <a mat-button routerLink="/faq">FAQ</a>
-      <a mat-button routerLink="/about">Who we are</a>
-    </span>
-    <span class="right-content">
-      <button mat-button routerLink="/login">Login</button>
-      <button mat-button routerLink="/get-started">Get Started</button>
-    </span>
-  </mat-toolbar>
-  </header> 
+    <mat-toolbar class="container">
+        <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon> 
+        </button>
+        <span><img src="../../../assets/logo.png" height="45"  class="menuLogo"></span>
+       <div class="nav" >
+        <a mat-button routerLink="/whoweare" class="top-menu-item">WHO WE ARE</a>
+        <a mat-button routerLink="/faq" class="top-menu-item">FAQ</a>
+        <a mat-button routerLink="/auth" class="login-btn"><mat-icon>login</mat-icon>Login</a>
+        <a mat-button routerLink="/" class="get-started">Get Started</a>
+
+       </div>
+   
+    </mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="30" mode="side">
+        <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" class="mat-icon-close" aria-label="Example icon-button with menu icon">
+            <mat-icon>close</mat-icon> 
+        </button>
+        <div class="side-nav-items">
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/whoweare"
+                    class="side-menu-item"><mat-icon></mat-icon>WHO WE ARE</a>
+            </div>
+
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/faq"
+                    class="side-menu-item">FAQ</a>
+            </div>
+
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/login">
+                    <button mat-stroked-button class="side-menu-item login-btn-mobile">
+                        <mat-icon style="margin: -5px 5px;">login</mat-icon>Login
+                        
+                    </button>
+                </a>
+            </div>
+
+            <div>
+                <a (click)="sidenav.close()" mat-button routerLink="/get-started">
+                    <button mat-stroked-button class="get-started-mobile">Get Started</button>
+
+                </a>
+            </div>
+        </div>
+
+    </mat-sidenav>

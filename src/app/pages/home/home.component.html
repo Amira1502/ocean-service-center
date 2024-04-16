@@ -1,0 +1,43 @@
+<div class="hero-card">
+    <div class="home-banner-container">
+        <h1> Helping people like you
+            <p> Connect & Save </p>
+        </h1>
+        <button class="get-started">
+            Get Started
+        </button>
+
+    </div>
+
+</div>
+<div class="stats-container">
+
+    <div class="stats-item-container">
+        <p class="total-shipyards">410</p>
+        <span class="stats-item-shipyards">Shipyards</span>
+    </div>
+
+    <div class="stats-item-container">
+        <p class="total-repairs">3000</p>
+        <span class="stats-item-repairs">Boats Being Repaired</span>
+    </div>
+</div>
+
+<app-who-we-are></app-who-we-are>
+
+<div class="testimonial">
+    <h2 id="testimonials">What People Are Saying</h2>
+    <div class="grid-layout">
+        <div class="grid-item" *ngFor="let testimonial of testimonials">
+            <p>{{ testimonial.text }}</p>
+            <h3>{{ testimonial.author }}</h3>
+        </div>
+    </div>
+</div>
+
+<div class="trusted">
+    <h2>Trusted By:</h2>
+    <div *ngFor="let brand of brands">
+        <img src={{brand.icon}} />
+    </div>
+</div>
