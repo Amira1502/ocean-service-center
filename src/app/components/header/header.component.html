@@ -1,18 +1,18 @@
-<header>
+
     <mat-toolbar class="container">
         <button mat-icon-button (click)="sidenav.toggle()" id="menuIcon" aria-label="Example icon-button with menu icon">
             <mat-icon>menu</mat-icon> 
         </button>
-        <span><img src="../../../assets/logo.png" height="45"  class="menuLogo"></span>
+        <a routerLink="/"><span><img src="../../../assets/logo.png" height="45"  class="menuLogo"></span></a>
        <div class="nav" >
-        <a mat-button routerLink="/whoweare" class="top-menu-item">WHO WE ARE</a>
+        <a mat-button routerLink="/how-it-works" class="top-menu-item">WHO WE ARE</a>
         <a mat-button routerLink="/faq" class="top-menu-item">FAQ</a>
         <a mat-button routerLink="/auth" class="login-btn"><mat-icon>login</mat-icon>Login</a>
-        <a mat-button routerLink="/" class="get-started">Get Started</a>
-
+        <a mat-button routerLink="/signup" class="get-started">Get Started</a>
        </div>
    
     </mat-toolbar>
+
 
 <mat-sidenav-container>
     <mat-sidenav #sidenav [fixedInViewport]="true" [fixedTopGap]="30" mode="side">
